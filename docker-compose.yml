@@ -4,12 +4,16 @@ services:
     container_name: nacos
     environment:
       - MODE=standalone
-      - NACOS_AUTH_ENABLE=false   # 关闭认证以避免 NACOS_AUTH_IDENTITY_KEY 报错
+      - NACOS_AUTH_ENABLE=false
+      # 可选：降低内存占用（老机器更稳）
+      - JVM_XMS=256m
+      - JVM_XMX=256m
+      - JVM_XMN=128m
     ports:
       - "8848:8848"
+    # ⚠️ 用 Docker 命名卷，别再用 ./nacos_data 这种宿主机绑定卷
     volumes:
-      - ./nacos_data:/home/nacos/data
-
+      - nacos_data:/home/nacos/data
 
   demo-app:
     build: ./demo-app
@@ -22,3 +26,7 @@ services:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+
+# ⬇️ 在文件底部新增（定义命名卷）
+volumes:
+  nacos_data:
