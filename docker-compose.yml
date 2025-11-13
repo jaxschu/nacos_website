@@ -4,7 +4,10 @@ services:
     container_name: nacos
     environment:
       - MODE=standalone
-      - NACOS_AUTH_ENABLE=false
+      - NACOS_AUTH_ENABLE=true
+      - NACOS_AUTH_TOKEN=MTIzNDU2Nzg5MGFiY2RlZmdoaWprbG1ub3BxcnN0dXY=
+      - NACOS_AUTH_IDENTITY_KEY=serverIdentity
+      - NACOS_AUTH_IDENTITY_VALUE=security
       # 可选：降低内存占用（老机器更稳）
       - JVM_XMS=256m
       - JVM_XMX=256m
