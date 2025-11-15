@@ -1,0 +1,10 @@
+# Bytecode / caches
+__pycache__/
+*.pyc
+
+# Local Flask demo artifacts
+nacos_data/
+demo-app/instance/
+
+# Scanner outputs
+scanner/results.json
