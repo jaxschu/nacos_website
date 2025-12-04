@@ -2,6 +2,7 @@ services:
   nacos:
     image: nacos/nacos-server:v2.3.2
     container_name: nacos
+    platform: linux/amd64  # Enable on Apple Silicon/ARM hosts
     environment:
       - MODE=standalone
       - NACOS_AUTH_ENABLE=false   # 关闭认证以避免 NACOS_AUTH_IDENTITY_KEY 报错
