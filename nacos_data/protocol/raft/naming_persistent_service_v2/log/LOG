@@ -5145,3 +5145,5 @@ rocksdb.table.open.prefetch.tail.read.bytes P50 : 0.000000 P95 : 0.000000 P99 : 
 2025/12/05-06:20:59.091136 140733624874752 [/db_impl/db_impl.cc:1022] Storing 211 stats with timestamp 1764886859 to in-memory stats history
 2025/12/05-06:20:59.091224 140733624874752 [/db_impl/db_impl.cc:1035] [Pre-GC] In-memory stats history size: 140854 bytes, slice count: 14
 2025/12/05-06:20:59.091245 140733624874752 [/db_impl/db_impl.cc:1044] [Post-GC] In-memory stats history size: 140854 bytes, slice count: 14
+2025/12/05-06:26:02.354834 140733725529856 [/db_impl/db_impl.cc:487] Shutdown: canceling all background work
+2025/12/05-06:26:02.358982 140733725529856 [/db_impl/db_impl.cc:668] Shutdown complete
